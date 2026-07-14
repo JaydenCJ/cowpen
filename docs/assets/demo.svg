@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="576" viewBox="0 0 720 576" font-family="Menlo, Consolas, monospace" font-size="14">
+  <rect width="720" height="576" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="360" y="27" fill="#8b949e" text-anchor="middle" font-size="12">cowpen — snapshot, let the agent loose, diff, then commit or roll back</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="62"><tspan fill="#7ee787">$</tspan> cowpen new -m "before agent session"</text>
+    <text x="24" y="84"><tspan fill="#7ee787">opened</tspan> p-djx7opeby6vf-b42a — snapshot of 2 files (63 B stored, 0 deduped)</text>
+    <text x="24" y="106" fill="#8b949e">edit freely; `cowpen diff` to review, `cowpen rollback` to undo</text>
+    <text x="24" y="136" fill="#8b949e"># ... the agent edits, adds debris, deletes a file ...</text>
+    <text x="24" y="166"><tspan fill="#7ee787">$</tspan> cowpen status</text>
+    <text x="24" y="188"><tspan fill="#f85149">D</tspan> README.md</text>
+    <text x="24" y="210"><tspan fill="#7ee787">A</tspan> scratch.log</text>
+    <text x="24" y="232"><tspan fill="#d29922">M</tspan> src/main.go</text>
+    <text x="24" y="254">3 changed vs p-djx7opeby6vf-b42a (1 added, 1 modified, 1 deleted)</text>
+    <text x="24" y="284"><tspan fill="#7ee787">$</tspan> cowpen diff src</text>
+    <text x="24" y="306">--- a/src/main.go</text>
+    <text x="24" y="328">+++ b/src/main.go</text>
+    <text x="24" y="350" fill="#58a6ff">@@ -1,5 +1,5 @@</text>
+    <text x="24" y="372" xml:space="preserve"> package main</text>
+    <text x="24" y="416" xml:space="preserve"> func main() {</text>
+    <text x="24" y="438" fill="#f85149" xml:space="preserve">-        println("hello")</text>
+    <text x="24" y="460" fill="#7ee787" xml:space="preserve">+        println("hello, world")</text>
+    <text x="24" y="482" xml:space="preserve"> }</text>
+    <text x="24" y="512"><tspan fill="#7ee787">$</tspan> cowpen rollback</text>
+    <text x="24" y="534"><tspan fill="#7ee787">rolled back</tspan> to p-djx7opeby6vf-b42a — 2 restored, 1 removed, 1 pen closed</text>
+    <text x="24" y="556" fill="#8b949e"># the tree is byte-for-byte back to the snapshot — modes, mtimes and all</text>
+  </g>
+</svg>
